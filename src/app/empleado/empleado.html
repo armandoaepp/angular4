@@ -1,13 +1,64 @@
-<h2> Componente de Empleados</h2>
-<p>
-	Armando,
-	Enrique,
-	Valerio,
-	Maria,
-	Mery
+<h2> {{ titulo }}</h2>
 
-</p>
+	<hr>
 
-<hr>
-{{ nombre_componente }}
-{{ list_data }}
+
+	<div *ngIf="trabajador_externo === true ">
+		<button (click)="cambiarExterno(false)"> Mostrar Trabajador </button>
+		<strong>Trabajores </strong>
+		<ul >
+			<li>
+				Nombre: {{trabajadores[2].nombre}}
+			</li>
+			<li>
+				Edad: {{trabajadores[2].edad}}
+			</li>
+			<li>
+				Cargo: {{trabajadores[2].cargo}}
+			</li>
+			<li *ngIf="trabajadores[2].contrato === true"> Contrado	</li>
+			<li *ngIf="trabajadores[2].contrato === false"> NO Contrado	</li>
+		</ul>
+	</div>
+
+	<div *ngIf="trabajador_externo === false ">
+		<button (click)="cambiarExterno(true)"> Mostrar Empleado</button>
+
+		<strong>Empleado Estrella</strong>
+		<ul >
+			<li>
+				Nombre: {{empleado.nombre}}
+			</li>
+			<li>
+				Edad: {{empleado.edad}}
+			</li>
+			<li>
+				Cargo: {{empleado.cargo}}
+			</li>
+			 <li *ngIf="empleado.contrato === true"> Contrado	</li>
+			<li *ngIf="empleado.contrato === false"> NO Contrado	</li>
+		</ul>
+	</div>
+
+
+
+		<strong>Lista de Empleados </strong>
+
+		<ul>
+			<li  *ngFor="let empleado of trabajadores;">
+				<ul style="margin-bottom:10px;">
+					<li>
+						Nombre: {{empleado.nombre}}
+					</li>
+					<li>
+						Edad: {{empleado.edad}}
+					</li>
+					<li>
+						Cargo: {{empleado.cargo}}
+					</li>
+					<li *ngIf="empleado.contrato === true"> Esta Contrado	</li>
+					<li *ngIf="empleado.contrato === false"> NO esta Contrado	</li>
+				</ul>
+			</li>
+		</ul>
+
