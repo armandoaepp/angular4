@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { routing, AppRoutingProviders} from './app.routing' ;
+
+
 import { AppComponent } from './app.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
@@ -16,9 +19,10 @@ import { EmpleadoComponent } from './empleado/empleado.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [AppRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
