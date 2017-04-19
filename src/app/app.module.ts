@@ -6,15 +6,20 @@ import { HttpModule } from '@angular/http';
 import { routing, AppRoutingProviders} from './app.routing' ;
 
 
-import { AppComponent } from './app.component';
-import { FrutaComponent } from './fruta/fruta.component';
-import { EmpleadoComponent } from './empleado/empleado.component';
+import { AppComponent }       from './app.component';
+import { FrutaComponent }     from './fruta/fruta.component';
+import { EmpleadoComponent }  from './empleado/empleado.component';
+
+import { HomeComponent }     from './home/home.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FrutaComponent,
     EmpleadoComponent,
+    HomeComponent,
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,
