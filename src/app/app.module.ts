@@ -13,6 +13,8 @@ import { EmpleadoComponent }  from './empleado/empleado.component';
 import { HomeComponent }     from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
+import { ConversorPipe } from './pipes/conversor.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +22,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     EmpleadoComponent,
     HomeComponent,
     ContactoComponent,
+    ConversorPipe,
   ],
   imports: [
     BrowserModule,

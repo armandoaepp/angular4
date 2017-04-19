@@ -6,6 +6,8 @@ export class RopaService{
  	public nombre_prenda = "pantalones" ;
  	public coleccion_ropa = ['Pantalon', 'Camisa', 'Polos'] ;
 
+
+
 	prueba(nombre_prenda){
 		return nombre_prenda ;
 		// return this.nombre_prenda ;

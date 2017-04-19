@@ -12,9 +12,16 @@ export class HomeComponent{
 	public listado_ropa:Array<string>;
 	public prenda_guardar:string ;
 
+ 	public fecha ;
+
+ 	public nombre = " Armando Enrique Pisfil PUEmape";
+
+
 	constructor(
 		private _ropaService: RopaService
-	){}
+	){
+		this.fecha =  new Date(2017,4,19);
+	}
 
 	ngOnInit(){
 		this.listado_ropa =  this._ropaService.getRopa();
